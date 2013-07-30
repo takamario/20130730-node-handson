@@ -76,13 +76,23 @@ $ node-dev app.js
 ## Libraries
 
 - Utils
--- [cofee-script](#)
--- [iced-coffee-script](#)
--- [async](#)
--- [conoliate](#)
+    - [coffee-script](http://coffeescript.org/)
+    - [iced-coffee-script](http://maxtaco.github.io/coffee-script/)
+    - [q](https://github.com/kriskowal/q)
+    - [async](https://github.com/caolan/async)
+    - [consolidate](https://github.com/visionmedia/consolidate.js/)
+- HTTP client
+    - [request](https://github.com/mikeal/request)
 - WebSocket
--- [socket.io](#)
+    - [socket.io](http://socket.io/)
 - DB
--- [mongo](#)
--- [redis](#)
--- [sqlite](#)
+    - [mongoose](http://mongoosejs.com/)
+    - [redis](https://github.com/mranney/node_redis)
+    - [sqlite](https://github.com/developmentseed/node-sqlite3)
+- Server
+    - [node-dev](https://github.com/fgnass/node-dev)
+- frameworks
+    - [Sails.js](http://sailsjs.org/)
+    - [Mojito](http://developer.yahoo.com/cocktails/mojito/)
+    - [Derby](http://derbyjs.com/)
+    - [Compound](http://compoundjs.com/)
