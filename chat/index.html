@@ -1,0 +1,31 @@
+name:<input id="name"><br>
+message:<textarea id="msg"></textarea><br>
+<input id="btn" type="submit" value="Go!">
+<hr>
+<div id="res"></div>
+<script src="/javascripts/jquery-1.10.2.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://10.158.7.71:3000');
+
+  // when btn click, send message to server
+  $("#btn").on("click", function(){
+    // no name noop
+    if ($("#name").val().trim() == "") {
+      alert("Please input your name!");
+      return false;
+    }
+
+    // send message
+    socket.emit("msg", {
+      name: $("#name").val(),
+      msg: $("#msg").val()
+    });
+  });
+
+
+  socket.on("recv", function(data) {
+    console.log(data);
+    $("#res").prepend("<p><b>" + $("<a>" + data.name + "</a>").text() + "</b> (" + new Date().toString()  + ")<br>" + $("<a>" + data.msg + "</a>").text() + "</p>");
+  });
+</script>
